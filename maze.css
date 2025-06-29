@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#maze {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  max-width: 90vmin;
+  margin: 20px auto;
+  gap: 2px;
+}
+.cell {
+  aspect-ratio: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.wall { background: #444; }
+.path { background: #eee; }
+.player { background: url('assets/avatars/player.png') center/contain no-repeat; }
+.exit   { background: #8f8; }
+
+/* Controls styling */
+#controls {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+#controls button {
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem;
+  border-radius: 50%;
+}
